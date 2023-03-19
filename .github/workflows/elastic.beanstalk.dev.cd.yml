@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.15.1]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -23,6 +23,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       #         cache: 'npm'
+
+      - name: Installing express
+      - run: npm install express
+
+      - name: Installing Dependencies
+      - run: npm install cross-env
 
       - name: Installing NPM
         run: npm install
