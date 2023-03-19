@@ -27,7 +27,7 @@ jobs:
       - name: Installing NPM
         run: npm install
 
-      - name: Installing config
+      - name: Installing conf
         run: npm install config
 
       - name: Installing express
