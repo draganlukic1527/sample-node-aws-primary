@@ -25,10 +25,10 @@ jobs:
       #         cache: 'npm'
 
       - name: Installing express
-      - run: npm install express
+        run: npm install express
 
       - name: Installing Dependencies
-      - run: npm install cross-env
+        run: npm install cross-env
 
       - name: Installing NPM
         run: npm install
