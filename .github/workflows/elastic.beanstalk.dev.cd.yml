@@ -57,7 +57,7 @@ jobs:
           flags: "g"
 
       - name: sample-nodejs-env
-        uses: einaregilsson/beanstalk-deploy@v19
+        uses: einaregilsson/beanstalk-deploy@v18
         with:
           aws_access_key: ${{secrets.AWS_PROD_ACCESS_KEY}}
           aws_secret_key: ${{secrets.AWS_PROD_SECRET_KEY}}
