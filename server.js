@@ -1,11 +1,12 @@
-const http = require("http");
-
-const host = "localhost";
-const port = 8000;
-
-const requestListener = function (req, res) {};
-
-const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-	console.log(`Server is running on:  http://${host}:${port}`);
+const express = require("express");
+const config = require("config");
+const app = express();
+const { PORT = 3000 } = process.env;
+console.log("PORT : ", PORT);
+app.get("/", (req, res) => {
+	var environment_name = config.get("environment_name");
+	res.json({ message: "Hello World, " + environment_name });
 });
+app.listen(PORT, () =>
+	console.log(`The application is now listening on http://localhost:${PORT}`)
+);

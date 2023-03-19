@@ -1,5 +1,28 @@
 {
-  "dependencies": {
-    "node": "^19.8.1"
-  }
+	"dependencies": {
+		"config": "^3.3.9",
+		"cross-env": "^7.0.3",
+		"express": "^4.18.2",
+		"node": "^19.8.1"
+	},
+	"scripts": {
+		"start": "node server.js",
+		"start:local": "cross-env NODE_ENV=development node server.js",
+		"build": "node server.js"
+	},
+	"name": "nodejs-aws-sample",
+	"version": "1.0.0",
+	"main": "server.js",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/draganlukic1527/sample-node-aws-primary.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/draganlukic1527/sample-node-aws-primary/issues"
+	},
+	"homepage": "https://github.com/draganlukic1527/sample-node-aws-primary#readme",
+	"description": ""
 }
