@@ -65,6 +65,7 @@ jobs:
           environment_name: sample-nodejs-env
           region: us-east-2
           version_label: "app-version-${{ steps.format-time.outputs.replaced }}" #Using timestamp for the versions
+          deployment_package: deploy.zip
 
       - name: Deployed successfully!
         run: echo App deployed to ELB
