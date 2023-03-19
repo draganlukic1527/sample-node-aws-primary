@@ -24,14 +24,17 @@ jobs:
           node-version: ${{ matrix.node-version }}
       #         cache: 'npm'
 
+      - name: Installing NPM
+        run: npm install
+
+      - name: Installing config
+        run: npm install config
+
       - name: Installing express
         run: npm install express
 
       - name: Installing Dependencies
         run: npm install cross-env
-
-      - name: Installing NPM
-        run: npm install
 
       - run: npm ci
 
